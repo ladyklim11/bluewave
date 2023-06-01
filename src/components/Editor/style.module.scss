@@ -1,0 +1,669 @@
+.Editor {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  min-height: 90vh;
+  overflow: hidden;
+
+  @media screen and (min-width: 991px) {
+    width: 356px;
+    height: 75vh;
+    min-height: 100%;
+    margin: 0 auto;
+    border: 10px solid #090715;
+    border-radius: 28px;
+  }
+}
+
+.List {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1px 0 15px;
+
+  &__Item {
+    margin: 8px;
+    padding: 15px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 0 #D9D7E0;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &_alert {
+      background: #fff8ed;
+      text-align: center;
+      border: 1px solid #E3D6C1;
+      box-sizing: border-box;
+      border-radius: 8px;
+      font-weight: normal;
+      color: #8A6D3B;
+      box-shadow: none;
+
+      a {
+        text-decoration: underline;
+        font-weight: bold;
+        color: inherit;
+      }
+    }
+  }
+
+  &__Edit {
+    border: 2px dashed rgba(100, 66, 238, 0.24);
+
+    &__Panel {
+      display: flex;
+      width: calc(100% + 16px);
+      margin-left: -8px;
+      margin-bottom: 16px;
+      border: 1px solid #E6E5E9;
+      box-sizing: border-box;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    &__Item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      height: 40px;
+      border-right: 1px solid #E5E5E9;
+      border-radius: 0;
+      cursor: pointer;
+      background: #fff;
+      box-shadow: none;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: inherit;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.Block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #f3f2f7;
+
+  &__Form {
+    margin-bottom: 24px;
+  }
+
+  &__Row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__Backgrounds {
+    display: grid;
+    grid-gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__Background {
+    position: relative;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &Img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      transition: 0.3s;
+      transform: scale(1.02);
+    }
+  }
+
+  &__Checked {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &__Button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 32px;
+      height: 32px;
+      background: #9390A0;
+      border-radius: 50%;
+    }
+  }
+
+  &__Label {
+    margin-bottom: 8px;
+    color: #9390A0;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__Zones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 48px;
+    grid-gap: 8px;
+  }
+
+  &__Zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #E6E5E9;
+    box-sizing: border-box;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &_selected {
+      border: 1.5px dashed #452DA5;
+    }
+  }
+
+  &__Preview {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
+    min-height: 150px;
+    border-radius: 8px;
+    background: #fff;
+
+    &Remove {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      right: 8px;
+      cursor: pointer;
+
+      &:hover {
+        transition: 0.3s;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &__LikeInput {
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 9px 12px;
+    border: 1px solid #E6E5E9;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #FFFFFF;
+    font-size: 14px;
+    line-height: 22px;
+    color: #070413;
+    cursor: pointer;
+  }
+
+  &__LikeLink {
+    display: inline-block;
+    margin-top: 8px;
+    color: #6442EE;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.6;
+    }
+  }
+}
+
+.Switch {
+  margin-top: 24px;
+
+  span {
+    font-size: 14px !important;
+  }
+}
+
+.Picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Text {
+  padding: 0 !important;
+  word-break: break-all;
+  font-size: 14px;
+  line-height: 20px;
+
+  * {
+    cursor: default !important;
+  }
+}
+
+.Gallery {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas:
+    'MainPc MainPc MainPc MainPc MainPc'
+    '. . . . .';
+  grid-row-gap: 0;
+  grid-column-gap: 5px;
+
+  &__MainPicture { grid-area: MainPc; }
+
+  &__Item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.7;
+    }
+  }
+}
+
+.Divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__Line {
+    width: 47%;
+    height: 1px;
+    background: #6442EE;
+  }
+
+  &__Point {
+    width: 7px;
+    height: 7px;
+    background: #6442EE;
+    border-radius: 50%;
+  }
+}
+
+.Social {
+  &_small {
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  &__Item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto 8px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.9;
+    }
+
+    &_small {
+      width: 40px;
+      margin-right: 8px;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__Container {
+    position: absolute;
+    left: 10px;
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__Name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.Add {
+  position: fixed;
+  bottom: 23px;
+  left: calc(50% - 24px);
+  width: 48px;
+  height: 48px;
+  z-index: 999;
+  cursor: pointer;
+
+  @media screen and (min-width: 991px) {
+    position: absolute;
+  }
+}
+
+.GetLink {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 6px 8px 6px 15px;
+
+  &__Link {
+    padding: 13px 0;
+    color: #6442EE;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__Button {
+    width: 126px;
+    margin-left: auto;
+    font-size: 14px;
+    height: 36px;
+  }
+
+  &__Help {
+    margin-right: 8px;
+    margin-bottom: 2px;
+    color: #8F8D98;
+  }
+}
+
+.AddBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__Item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+    padding: 0 4px;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s;
+      transform: scale(1.04);
+    }
+  }
+
+  &__Icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 57px;
+  }
+
+  &__Type {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-size: 9px;
+    height: 14px;
+  }
+
+  &__Divider {
+    width: 100%;
+    height: 1px;
+    background: #EBEBEC;
+    margin-bottom: 8px;
+  }
+
+  &__Title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.ShowAllPages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(7, 4, 19, 0.08);
+  padding: 12px 0;
+
+  &:first-child {
+    margin-top: -4px;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  &__Title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: #070413;
+  }
+
+  &__Content {
+    width: 100%;
+    cursor: pointer;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__Url {
+    font-size: 14px;
+    line-height: 22px;
+    color: #8F8D98;
+  }
+
+  &__Edit {
+    cursor: pointer;
+
+  }
+}
+
+.Slides {
+  padding: 0;
+}
+
+.Slide {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.Breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.Product {
+  &__Col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__Circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    margin-top: 48px;
+    background: rgba(143,141,152,0.16);
+    border-radius: 50%;
+  }
+
+  &__Alert {
+    margin-top: 16px;
+    color: #4A4657;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.64;
+  }
+}
+
+.DND {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.DND > div {
+  opacity: 1 !important;
+}
+
+.DND > div:focus {
+  opacity: 0.5 !important;
+}
+
+.Warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background: #F6EFE4;
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #897134 !important;
+
+  a {
+    font-weight: bold;
+    color: #897134 !important;
+    text-decoration: underline !important;
+  }
+
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.Wrapper {
+  display: flex;
+  max-width: 1220px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.GetLinkPC {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  margin-bottom: 36px;
+  padding: 6px 6px 6px 19px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  color: #8F8D98;
+
+  &__Button {
+    width: max-content;
+    height: 36px;
+    padding: 7px 18px;
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 991px) {
+    margin-top: 32px;
+  }
+}
+
+.Contain {
+  height: 100%;
+  padding-top: 57px;
+
+  @media screen and (min-width: 991px) {
+    width: 100%;
+    height: calc(100% - 57px);
+    padding-top: 0;
+  }
+}
+
+.PaymentForm {
+  &__Title {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #070413;
+  }
+
+  &__Subtitle {
+    margin-bottom: 8px;
+  }
+
+  &__Button {
+    margin-top: 12px;
+    background-color: #070413;
+  }
+}
+
+.Video {
+  height: calc(100vw / 2);
+
+  @media screen and (min-width: 991px) {
+    height: 160px;
+  }
+}
+
+.Creator {
+  padding: 16px;
+}

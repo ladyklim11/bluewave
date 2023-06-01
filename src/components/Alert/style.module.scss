@@ -1,0 +1,70 @@
+.Alert {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1003;
+
+  @media screen and (min-width: 991px) {
+    width: 336px;
+    height: calc(75vh - 15px);
+  }
+}
+
+.Shadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #070413;
+  opacity: 0.48;
+  cursor: pointer;
+
+  @media screen and (min-width: 991px) {
+    position: absolute;
+  }
+}
+
+.Content {
+  position: fixed;
+  width: 90%;
+  max-width: 450px;
+  margin: 16px;
+  padding: 16px;
+  background: #F3F2F7;
+  border-radius: 16px;
+
+  @media screen and (min-width: 991px) {
+    position: absolute;
+  }
+}
+
+.Title, .Subtitle {
+  text-align: center;
+}
+
+.Title {
+  max-width: 80%;
+  margin: 0 auto 12px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #070413;
+}
+
+.Subtitle {
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4A4657;
+}
+
+.Close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}

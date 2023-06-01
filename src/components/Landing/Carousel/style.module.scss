@@ -1,0 +1,144 @@
+.ImageSignature {
+  position: absolute;
+  top: -43px;
+  left: -46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 162px;
+  height: 73px;
+  z-index: 2;
+
+  &_right {
+    left: auto;
+    right: -46px;
+  }
+
+  &__Text {
+    position: absolute;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    @media screen and (max-width: 991px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.ImageSvg {
+  width: 162px;
+  height: 73px;
+
+  @media screen and (max-width: 991px) {
+    width: 123%;
+    height: 143%;
+  }
+}
+
+.Images {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  @media screen and (max-width: 991px) {
+    justify-content: center;
+  }
+}
+
+.ImageSmall, .ImageDefault {
+  position: relative;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.ImageSmall {
+  width: 235px;
+  height: 434px;
+  z-index: 3;
+
+  @media screen and (max-width: 991px) {
+    width: 138px;
+    height: 253px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 46px;
+  }
+}
+
+.ImageDefault {
+  width: 275px;
+  height: 549px;
+
+  &_marginLeft {
+    margin-left: -50px;
+    z-index: 1;
+  }
+
+  &_marginRight {
+    margin-right: -50px;
+  }
+
+  @media screen and (max-width: 991px) {
+    width: 173px;
+    height: 346px;
+  }
+}
+
+.Image {
+  position: absolute;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  margin: 12px;
+  overflow: hidden;
+  border-radius: 23px;
+
+  &__Current {
+    left: 0;
+    opacity: 1;
+  }
+
+  &__Next {
+    left: -240px;
+    opacity: 0;
+  }
+
+  &_moved_toCenter {
+    transition: 0.5s;
+    left: 0;
+    opacity: 1;
+  }
+
+  &_moved_toAway {
+    transition: 0.5s;
+    left: 500px;
+    opacity: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    margin: 8px;
+  }
+}
+
+.Container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10%;
+
+  @media screen and (max-width: 991px) {
+    border-radius: 52px;
+  }
+}

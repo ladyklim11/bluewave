@@ -1,0 +1,94 @@
+
+.Container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.Shadow {
+  width: 100%;
+  height: 100%;
+  background: #070413;
+  opacity: 0.48;
+  cursor: pointer;
+}
+
+.Content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 227px;
+  width: 60vw;
+  max-width: 400px;
+  height: 100%;
+  padding-top: 57px;
+  z-index: 1;
+  background: rgba(243, 242, 246, 0.96);
+  backdrop-filter: blur(32px);
+}
+
+.UserInfo {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  padding: 16px;
+}
+
+.Avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.UserName {
+  width: calc(100% - 48px - 12px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #070413;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+
+  &_active {
+    background: rgba(255, 255, 255, 0.64);
+  }
+
+  &_userActive {
+    background: rgba(7, 4, 19, 0.04);
+  }
+}
+
+.Footer {
+  margin-bottom: 10px;
+}
+
+.UserMenu {
+  height: 100%;
+  background: #fff;
+}

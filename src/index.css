@@ -1,0 +1,372 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif !important;
+}
+
+html, #root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a:not(button):hover {
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+button, input.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  color: #fff;
+  background: #452DA5;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  outline: none;
+  border: none;
+}
+
+button.small {
+  height: 36px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+button.medium {
+  height: 40px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+button.big {
+  height: 48px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+button:hover, input.submit:hover {
+  transition: 0.3s;
+  opacity: 0.9;
+}
+
+button:disabled *, button:disabled {
+  background: #ACAAB1 !important;
+  color: #fff !important;
+}
+
+input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #D8D6E2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 14px 16px;
+  outline: none;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+}
+
+input:focus {
+  border: 1px solid #452DA5;
+}
+
+input.error {
+  border-color: red;
+}
+
+input:disabled {
+  background: #fff !important;
+  opacity: 0.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+img.Avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.slick-next:before, .slick-prev:before, .slick-dots li.slick-active button:before {
+  color: #452DA5 !important;
+}
+
+.slick-next {
+  right: 0 !important;
+}
+
+.slick-prev {
+  left: 0 !important;
+}
+
+.slick-dots {
+  bottom: -30px !important;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ql-editor {
+  min-height: inherit;
+  overflow: inherit;
+}
+
+.ql-container {
+  min-height: 152px;
+  margin-top: 8px !important;
+  background: #FFFFFF;
+  border: 1px solid #E6E5E9 !important;
+  border-radius: 8px;
+}
+
+.ql-toolbar {
+  padding: 0;
+}
+
+.ql-formats {
+  background: #fff !important;
+  border-radius: 8px !important;
+}
+
+.ql-toolbar button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 40px !important;
+  border-right: 1px solid #E5E5E9 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.ql-toolbar button svg {
+  height: 50% !important;
+}
+
+.ql-toolbar button:last-child {
+  border-right: 0 !important;
+}
+
+.ql-snow.ql-toolbar button:hover, .ql-snow .ql-toolbar button:hover, .ql-snow.ql-toolbar button:focus, .ql-snow .ql-toolbar button:focus, .ql-snow.ql-toolbar button.ql-active, .ql-snow .ql-toolbar button.ql-active, .ql-snow.ql-toolbar .ql-picker-label:hover, .ql-snow .ql-toolbar .ql-picker-label:hover, .ql-snow.ql-toolbar .ql-picker-label.ql-active, .ql-snow .ql-toolbar .ql-picker-label.ql-active, .ql-snow.ql-toolbar .ql-picker-item:hover, .ql-snow .ql-toolbar .ql-picker-item:hover, .ql-snow.ql-toolbar .ql-picker-item.ql-selected, .ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+  color: #452DA5 !important;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-stroke, .ql-snow .ql-toolbar button:hover .ql-stroke, .ql-snow.ql-toolbar button:focus .ql-stroke, .ql-snow .ql-toolbar button:focus .ql-stroke, .ql-snow.ql-toolbar button.ql-active .ql-stroke, .ql-snow .ql-toolbar button.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke, .ql-snow.ql-toolbar button:hover .ql-stroke-miter, .ql-snow .ql-toolbar button:hover .ql-stroke-miter, .ql-snow.ql-toolbar button:focus .ql-stroke-miter, .ql-snow .ql-toolbar button:focus .ql-stroke-miter, .ql-snow.ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar button.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter, .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter, .ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+  color: #452DA5 !important;
+}
+
+.ql-formats {
+  height: 42px !important;
+}
+
+.ql-header.ql-picker {
+  height: 100% !important;
+}
+
+.ql-picker-label {
+  display: flex !important;
+  align-items: center;
+}
+
+.ql-snow .ql-formats {
+  margin: 3px 0;
+}
+
+.ql-toolbar.ql-snow {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.ql-font-arial {
+  font-family: 'Arial', sans-serif !important;
+}
+
+.ql-font-comicSans {
+  font-family: 'Comic Sans MS', sans-serif !important;
+}
+
+.ql-font-courierNew {
+  font-family: 'Courier New', sans-serif !important;
+}
+
+.ql-font-roboto {
+  font-family: 'roboto', sans-serif !important;
+}
+
+.ql-font-sansSerif {
+  font-family: sans-serif !important;
+}
+
+a {
+  width: max-content;
+  color: #6442EE !important;
+  border-bottom: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.limited {
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.errorMessage {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  color: red;
+  font-size: 12px;
+}
+
+.react-colorful__pointer {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+/* Table */
+
+.MuiTableCell-stickyHeader {
+  background: transparent !important;
+}
+
+.MuiTableCell-head{
+  color: #000000;
+  opacity: 0.5;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.MuiTableCell-root {
+  padding: 8px !important;
+}
+
+.MuiTableRow-root .MuiTableCell-root {
+  border-bottom: 1px solid rgba(224, 224, 224, 1)
+}
+
+.ps__thumb-y {
+  width: 2px !important;
+}
+
+
+/* Button */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple .rippleContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.ripple .rippleContainer span {
+  transform: scale(0);
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.75;
+  background-color: #ffffff;
+  animation: ripple 850ms;
+}
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+.ql-formats {
+  padding: 5px 10px;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+}

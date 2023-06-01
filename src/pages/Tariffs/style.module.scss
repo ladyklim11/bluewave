@@ -1,0 +1,329 @@
+.Row {
+  display: flex;
+  align-items: center;
+}
+
+.Tariffs {
+  width: 100%;
+  margin-top: 57px;
+  padding: 16px;
+}
+
+.Content {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 8px;
+  padding: 12px 16px 16px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 32px rgba(8, 4, 23, 0.04);
+  border-radius: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 4px;
+}
+
+.PricePerMonths {
+  font-size: 18px;
+  line-height: 32px;
+  color: #070413;
+}
+
+.OldPricePerMonth, .PricePerMonth {
+  font-size: 14px;
+  line-height: 22px;
+  color: #070413;
+  opacity: 0.64;
+}
+
+.OldPricePerMonth {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #ED3A3A;
+  }
+}
+
+.Benefit {
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+
+  img {
+    margin-right: 9px;
+  }
+}
+
+.Divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 13px;
+  background: rgba(7, 4, 19, 0.08);
+}
+
+.Text {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.PC {
+  width: 90%;
+  max-width: 1220px;
+  margin: 0 auto;
+
+  &__Title {
+    margin-top: 48px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #070413;
+  }
+
+  &__Info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 606px;
+    padding: 20px 24px 24px;
+    background: #fff;
+    border-top: 4px solid #C4C4C4;
+
+    &_good {
+      border-top: 4px solid #452DA5;
+    }
+
+    &_best {
+
+    }
+  }
+
+  &__Better {
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 74px);
+    width: 150px;
+    padding: 5px 8px;
+    background: #E84B47;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__Benefits {
+    margin-bottom: 10px;
+  }
+
+  &__Benefit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    img {
+      margin-right: 9px;
+    }
+  }
+
+  &__Button {
+    margin-top: auto;
+  }
+
+  &__Text {
+    color: #070413;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__PeriodPrice {
+    color: #070413;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  &__Prices {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 23px;
+    padding: 9px;
+    border-top: 1px solid rgba(7, 4, 19, 0.08);
+    border-bottom: 1px solid rgba(7, 4, 19, 0.08);
+  }
+
+  &__OldPrice {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    color: #070413;
+    opacity: 0.64;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #ED3A3A;
+    }
+  }
+
+  &__MonthPrice {
+    color: #070413;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__Type {
+    color: #8F8D98;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__Cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+  }
+}
+
+.Selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 32px;
+  margin-top: 13px;
+  margin-bottom: 12px;
+  padding: 0 3px;
+  background: rgba(118, 118, 128, 0.12);
+  border-radius: 8px;
+
+  @media screen and (min-width: 991px) {
+    justify-content: flex-end;
+    height: 40px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    background: none;
+  }
+
+  &__Item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    height: 28px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    @media screen and (min-width: 991px) {
+      width: max-content;
+      height: 40px;
+      margin: 0 4px;
+      padding: 0 20px;
+      background: rgba(143, 141, 152, 0.2);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &_selected {
+      background: #fff;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+
+      @media screen and (min-width: 991px) {
+        background: #452DA5;
+
+        .Selector__Label {
+          color: #fff;
+        }
+      }
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__Label {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    color: #070413;
+
+    @media screen and (min-width: 991px) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__Discount {
+    position: absolute;
+    top: -9px;
+    left: calc(50% + 4px);
+    width: 42px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E84B47;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+  }
+}
+
+.Mobile {
+  &__Better {
+    position: absolute;
+    top: -7px;
+    left: calc(50% - 74px);
+    width: 150px;
+    padding: 5px 8px;
+    background: #E84B47;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}

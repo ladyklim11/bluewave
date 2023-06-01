@@ -1,0 +1,35 @@
+.box {
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.img-preview {
+  overflow: hidden;
+}
+
+
+.AVATAR_SELECT .cropper-crop-box, .AVATAR_SELECT .cropper-view-box {
+  border-radius: 50%;
+}
+
+.AVATAR_SELECT .cropper-view-box {
+  box-shadow: 0 0 0 1px #39f;
+  outline: 0;
+}
+
+.AVATAR_SELECT .cropper-face {
+  background-color:inherit !important;
+}
+
+.AVATAR_SELECT .cropper-dashed,
+.AVATAR_SELECT .cropper-point.point-se,
+.AVATAR_SELECT .cropper-point.point-sw,
+.AVATAR_SELECT .cropper-point.point-nw,
+.AVATAR_SELECT .cropper-point.point-ne,
+.AVATAR_SELECT .cropper-line {
+  display:none !important;
+}
+
+.AVATAR_SELECT .cropper-view-box {
+  outline:inherit !important;
+}

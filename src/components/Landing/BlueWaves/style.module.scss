@@ -1,0 +1,90 @@
+.Container {
+  width: 100%;
+  margin-top: -100px;
+  background: #452DA5;
+
+  @media screen and (max-width: 991px) {
+    margin-top: 0
+  }
+}
+
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 0 auto;
+  padding: 80px 20px;
+
+  @media screen and (max-width: 991px) {
+    padding: 0 20px 58px;
+  }
+}
+
+.Title {
+  margin-bottom: 19px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B2A6E6;
+
+  @media screen and (max-width: 991px) {
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+}
+
+.Counter {
+  display: flex;
+  margin-bottom: 85px;
+
+  &__Container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 9px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      width: 68px;
+      height: 88px;
+
+      @media screen and (max-width: 991px) {
+        width: 38px;
+        height: 48px;
+      }
+    }
+  }
+
+  &__Value {
+    position: absolute;
+    color: #fff;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+
+    @media screen and (max-width: 991px) {
+      font-size: 36px;
+      font-weight: 600;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    margin-bottom: 36px;
+  }
+}
+
+.Text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #FFFFFF;
+
+  @media screen and (max-width: 991px) {
+    text-align: center;
+  }
+}
